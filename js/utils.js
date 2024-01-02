@@ -603,7 +603,7 @@ const anzhiyu = {
     const getTimeState = () => {
       const hour = new Date().getHours();
       let message = "";
-
+/*
       if (hour >= 0 && hour <= 5) {
         message = "睡个好觉，保证精力充沛";
       } else if (hour > 5 && hour <= 10) {
@@ -615,7 +615,18 @@ const anzhiyu = {
       } else if (hour > 18 && hour <= 24) {
         message = "不要太劳累了，早睡更健康";
       }
-
+*/
+      if (hour >= 0 && hour <= 5) {
+        message = "点击推荐我喜欢的音乐";
+      } else if (hour > 5 && hour <= 10) {
+        message = "点击推荐我喜欢的音乐";
+      } else if (hour > 10 && hour <= 14) {
+        message = "点击推荐我喜欢的音乐";
+      } else if (hour > 14 && hour <= 18) {
+        message = "点击推荐我喜欢的音乐";
+      } else if (hour > 18 && hour <= 24) {
+        message = "不早了，睡吧";
+      }
       return message;
     };
 
