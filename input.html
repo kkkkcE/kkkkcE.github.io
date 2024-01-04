@@ -5,7 +5,7 @@
   diytitle: {"enable":true,"leaveTitle":"dont leave me...","backTitle":""},
   LA51: undefined,
   greetingBox: undefined,
-  twikooEnvId: 'mongodb+srv://user_kcE:wangck2121@cluster0.o6j85dg.mongodb.net/mydatabase',
+  twikooEnvId: 'https://torchonthemoon.netlify.app/.netlify/functions/twikoo',
   commentBarrageConfig:undefined,
   root: '/',
   preloader: {"source":3},
@@ -334,7 +334,7 @@ queueMicrotask(() => {
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'mongodb+srv://user_kcE:wangck2121@cluster0.o6j85dg.mongodb.net/mydatabase',
+      envId: 'https://torchonthemoon.netlify.app/.netlify/functions/twikoo',
       region: 'ap-guangzhou',
       onCommentLoaded: () => {
         anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
@@ -351,7 +351,7 @@ queueMicrotask(() => {
     const countELement = document.getElementById('twikoo-count')
     if(!countELement) return
     twikoo.getCommentsCount({
-      envId: 'mongodb+srv://user_kcE:wangck2121@cluster0.o6j85dg.mongodb.net/mydatabase',
+      envId: 'https://torchonthemoon.netlify.app/.netlify/functions/twikoo',
       region: 'ap-guangzhou',
       urls: [window.location.pathname],
       includeReply: false
@@ -393,7 +393,7 @@ queueMicrotask(() => {
   const getComment = () => {
     const runTwikoo = () => {
       twikoo.getRecentComments({
-        envId: 'mongodb+srv://user_kcE:wangck2121@cluster0.o6j85dg.mongodb.net/mydatabase',
+        envId: 'https://torchonthemoon.netlify.app/.netlify/functions/twikoo',
         region: 'ap-guangzhou',
         pageSize: 6,
         includeReply: true
